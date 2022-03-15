@@ -12,9 +12,9 @@ const mySql = require("mysql2");
 // Provide details about our mysql database.
 const db = mySql.createPool({
   host: "localhost",
-  user: "headless",
-  password: "648headless",
-  database: "mydb",
+  user: "test",
+  password: "sfsumasters2022",
+  database: "sys",
   // port: 3307,
 });
 
@@ -79,9 +79,11 @@ app.get("/api/get", (request, response) => {
     console.log("User selected techArea");
     queryName = tech;
   } 
-
+  
+  let test = "select * from sys_config";
+  
   //const sqlSelect = "SELECT * FROM job;";
-  db.query(queryName, (err, result) => {
+  db.query(test, (err, result) => {
     console.log(err);
     response.send(result);
   });
