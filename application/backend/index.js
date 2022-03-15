@@ -75,7 +75,7 @@ app.get("/api/get", (request, response) => {
   } else if (request.query.category === "city") {
     console.log("User selected City");
     queryName = job_city;
-  } else (request.query.category === "tech_area") {
+  } else if(request.query.category === "tech_area") {
     console.log("User selected techArea");
     queryName = tech;
   } 
